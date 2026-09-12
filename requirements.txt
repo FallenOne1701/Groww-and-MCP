@@ -1,0 +1,26 @@
+# Groww Weekly Review Pulse — Python dependencies (Phase 0+)
+
+# Agent / orchestration
+langchain>=0.3.0
+langchain-core>=0.3.0
+langgraph>=0.2.0
+
+# LLM providers — Groq (themes) + Gemini (quotes/actions/pulse)
+langchain-groq>=0.3.0
+langchain-google-genai>=2.0.0
+
+# MCP client (Docs / Gmail via MCP — Phase 3+)
+mcp>=1.0.0
+
+# Schemas & data
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+
+# CSV / JSON helpers for Play Store exports (Phase 1+)
+pandas>=2.0.0
+
+# Optional: fetch public Play Store reviews into data/raw/ (no login)
+google-play-scraper>=1.2.0
+
+# Language detection for English-only filter (Phase 1)
+langdetect>=1.0.9

@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "insufficient_signal": false,
+  "warnings": [],
+  "gates": {
+    "window": {
+      "name": "window",
+      "ok": true,
+      "detail": "2026-07-21 -> 2026-09-08 (1226 reviews)",
+      "errors": []
+    },
+    "theme_count": {
+      "name": "theme_count",
+      "ok": true,
+      "detail": "5 clustered; pulse top 3",
+      "errors": []
+    },
+    "quotes": {
+      "name": "quotes",
+      "ok": true,
+      "detail": "3 quotes; verbatim checked against corpus",
+      "errors": []
+    },
+    "actions": {
+      "name": "actions",
+      "ok": true,
+      "detail": "3 actions",
+      "errors": []
+    },
+    "length": {
+      "name": "length",
+      "ok": true,
+      "detail": "204 words (limit 250)",
+      "errors": []
+    },
+    "privacy": {
+      "name": "privacy",
+      "ok": true,
+      "detail": "no usernames / emails / phones / device ids in artifacts",
+      "errors": []
+    },
+    "source": {
+      "name": "source",
+      "ok": true,
+      "detail": "Play Store only; language=en",
+      "errors": []
+    }
+  }
+}

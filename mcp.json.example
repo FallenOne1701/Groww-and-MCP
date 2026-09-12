@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "pulse": {
+      "url": "https://mcp-server-1-production.up.railway.app/mcp",
+      "transport": "http",
+      "docs_tool": "google_docs_append_content",
+      "gmail_tool": "gmail_create_draft",
+      "document_id": "",
+      "_comment": "Set document_id (or PULSE_DOC_ID in .env). MCP-Server-1 appends only — create the Doc once in Drive. Auth: MCP_API_KEY Bearer. Do not call gmail_send_email."
+    },
+    "docs": {
+      "command": "python",
+      "args": ["-m", "src.mcp_servers.docs_server"],
+      "transport": "stdio",
+      "tool": "create_or_update_document",
+      "_comment": "Local stub only (MCP_TRANSPORT=inprocess|stdio)"
+    },
+    "gmail": {
+      "command": "python",
+      "args": ["-m", "src.mcp_servers.gmail_server"],
+      "transport": "stdio",
+      "tool": "create_draft",
+      "_comment": "Local stub only (MCP_TRANSPORT=inprocess|stdio)"
+    }
+  }
+}

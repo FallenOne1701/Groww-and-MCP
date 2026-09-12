@@ -1,0 +1,45 @@
+{
+  "status": {
+    "groq_key": true,
+    "gemini_key": true,
+    "llms_available": true
+  },
+  "results": [
+    {
+      "provider": "groq",
+      "ok": true,
+      "echo": "Groww weekly pulse smoke test",
+      "seconds": 3.36
+    },
+    {
+      "provider": "groq",
+      "check": "theme_label",
+      "theme_id": "app_reliability",
+      "in_vocab": true,
+      "seconds": 0.78
+    },
+    {
+      "provider": "gemini",
+      "ok": true,
+      "echo": "Groww weekly pulse smoke test",
+      "seconds": 5.04
+    },
+    {
+      "check": "sample_pulse",
+      "mode": "llm",
+      "review_count": 12,
+      "themes_path": "output\\llm_smoke\\themes.json",
+      "pulse_path": "output\\llm_smoke\\pulse.md",
+      "top_3": [
+        "app_reliability",
+        "trading_orders",
+        "customer_support"
+      ],
+      "word_count": 161,
+      "week_ending": "2026-08-28",
+      "seconds": 35.26,
+      "sample_n": 12,
+      "output_dir": "output\\llm_smoke"
+    }
+  ]
+}

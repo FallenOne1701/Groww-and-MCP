@@ -1,0 +1,54 @@
+{
+  "started_at": "2026-09-12T14:48:28.688101+00:00",
+  "sequence": "fetch -> classify -> pulse -> Docs append -> Gmail",
+  "mode": "heuristic",
+  "weeks": 8,
+  "skip_fetch": false,
+  "skip_delivery": false,
+  "send_email": false,
+  "mcp_transport": "inprocess",
+  "fetch": {
+    "skipped": false,
+    "weeks": 8,
+    "package_id": "com.nextbillion.groww",
+    "cleaned_path": "C:\\Users\\dhruv\\OneDrive\\Desktop\\AI agent and MCP\\data\\cleaned\\reviews.json",
+    "fetched_at": "2026-09-12T14:48:28.690680+00:00",
+    "review_count": 1314,
+    "window_start": "2026-07-18",
+    "window_end": "2026-09-12",
+    "raw_path": "C:\\Users\\dhruv\\OneDrive\\Desktop\\AI agent and MCP\\data\\raw\\groww_play_reviews_2026-09-12_en_in.json",
+    "weeks_used": 8,
+    "stats": {
+      "parsed": 6086,
+      "in_window": 6086,
+      "after_quality": 1314,
+      "dropped_non_english": 138,
+      "dropped_short_text": 4634
+    }
+  },
+  "week_key": "2026-W37",
+  "classify": {
+    "week_key": "2026-W37",
+    "review_count": 1314,
+    "top_3": [
+      "app_reliability",
+      "trading_orders",
+      "customer_support"
+    ],
+    "word_count": 204,
+    "validation_ok": true,
+    "insufficient_signal": false,
+    "window_widened": false
+  },
+  "delivery": {
+    "doc_id": "doc_80960dbed161",
+    "doc_url": "https://docs.google.com/document/d/doc_80960dbed161/edit",
+    "draft_id": "draft_22100987ac6e",
+    "sent_id": null,
+    "skipped": false,
+    "gmail_only": false,
+    "errors": []
+  },
+  "finished_at": "2026-09-12T14:49:01.143447+00:00",
+  "exit_reason": "ok"
+}

@@ -1,0 +1,134 @@
+{
+  "week_ending": "2026-09-08",
+  "mode": "heuristic",
+  "vocabulary": {
+    "trading_orders": "Trading & order execution",
+    "charts_market_data": "Charts & market / holdings data",
+    "customer_support": "Customer support",
+    "app_reliability": "App reliability & updates",
+    "fees_funding": "Fees, brokerage & funding"
+  },
+  "labeled_reviews": 1226,
+  "themes": [
+    {
+      "id": "trading_orders",
+      "label": "Trading & order execution",
+      "review_count": 361,
+      "avg_rating": 2.922,
+      "summary": "361 reviews; 166 rated ≤2★",
+      "sample_ids": [
+        "play-000f53979763356e",
+        "play-00a7e1c074e949bf",
+        "play-00e045940e502afb",
+        "play-01ab544759b63024",
+        "play-02b3cbc1f98f2855",
+        "play-0903556910f1a609",
+        "play-0b261f0a1aa92ad7",
+        "play-0b7c4fea8dbb4125",
+        "play-0c2b32b42c4b20d9",
+        "play-0d0d537ae3331b9a",
+        "play-0d1420e8c4be49ba",
+        "play-0da53c79dbe81d95"
+      ]
+    },
+    {
+      "id": "charts_market_data",
+      "label": "Charts & market / holdings data",
+      "review_count": 34,
+      "avg_rating": 2.471,
+      "summary": "34 reviews; 19 rated ≤2★",
+      "sample_ids": [
+        "play-0731d72dd75c840f",
+        "play-0c52171a5233255d",
+        "play-157ef34154dc9f61",
+        "play-1c637bf5fd96fdd7",
+        "play-25dac5f19bc69153",
+        "play-60a40983fe2c1a99",
+        "play-915de97106259522",
+        "play-b15235d2abe46405",
+        "play-b9274fe9a1f8432a",
+        "play-bf7d006cad377816",
+        "play-c9a1617799c83fe1",
+        "play-ca0ba390833da4e7"
+      ]
+    },
+    {
+      "id": "customer_support",
+      "label": "Customer support",
+      "review_count": 105,
+      "avg_rating": 1.629,
+      "summary": "105 reviews; 88 rated ≤2★",
+      "sample_ids": [
+        "play-04eca2b9e3d6c3a4",
+        "play-0cc886dfc666a402",
+        "play-0d100e894bbb2011",
+        "play-0dcc39564d7f5786",
+        "play-0eba7bf3d8a4b84d",
+        "play-0fda92232807e1de",
+        "play-1083839b6a019a5a",
+        "play-13045065f259617e",
+        "play-1504f11d448ba0bf",
+        "play-15c0433884037a82",
+        "play-16522885c6ce1436",
+        "play-1763e79157c796bc"
+      ]
+    },
+    {
+      "id": "app_reliability",
+      "label": "App reliability & updates",
+      "review_count": 588,
+      "avg_rating": 3.44,
+      "summary": "588 reviews; 202 rated ≤2★",
+      "sample_ids": [
+        "play-00aa3519ed7153a3",
+        "play-00c68a87629e6ac2",
+        "play-01a7a09a2073541f",
+        "play-023418c5d3b6f0fc",
+        "play-035126ccfd7d01ea",
+        "play-0451c27e7e1523a1",
+        "play-04a207c2dd6390eb",
+        "play-0530f1b208ca6471",
+        "play-05428223e8bb85cf",
+        "play-0712bd0537c695c1",
+        "play-0724c5d68d783e61",
+        "play-07d0a2bfca1a6b05"
+      ]
+    },
+    {
+      "id": "fees_funding",
+      "label": "Fees, brokerage & funding",
+      "review_count": 138,
+      "avg_rating": 2.645,
+      "summary": "138 reviews; 75 rated ≤2★",
+      "sample_ids": [
+        "play-014a15376f9c43ba",
+        "play-02b01bbd4f0ebe3f",
+        "play-0511f3a441ecf5b8",
+        "play-0b420f82771702b2",
+        "play-0c652cf90a6a44c0",
+        "play-0ca5a715ef904edf",
+        "play-0d4bbfad376d1526",
+        "play-0efa64d417e6d38b",
+        "play-165afe1ea6bd9b74",
+        "play-1939ece0fe6dab0a",
+        "play-196d810806d3d4c8",
+        "play-1b2a9622f0bfbd2a"
+      ]
+    }
+  ],
+  "top_3": [
+    "app_reliability",
+    "trading_orders",
+    "customer_support"
+  ],
+  "week_key": "2026-W37",
+  "run_id": "2026-W37",
+  "token_budget": {
+    "review_limit": null,
+    "review_count": 1226,
+    "weeks": 8,
+    "max_llm_label": 40,
+    "heuristic_min_score": 1,
+    "batch_size": 8
+  }
+}

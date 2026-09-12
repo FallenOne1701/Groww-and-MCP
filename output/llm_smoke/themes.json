@@ -1,0 +1,93 @@
+{
+  "week_ending": "2026-08-28",
+  "mode": "llm",
+  "vocabulary": {
+    "trading_orders": "Trading & order execution",
+    "charts_market_data": "Charts & market / holdings data",
+    "customer_support": "Customer support",
+    "app_reliability": "App reliability & updates",
+    "fees_funding": "Fees, brokerage & funding"
+  },
+  "labeled_reviews": 12,
+  "themes": [
+    {
+      "id": "trading_orders",
+      "label": "Trading & order execution",
+      "review_count": 2,
+      "avg_rating": 2.5,
+      "summary": "2 reviews; 1 rated ≤2★",
+      "sample_ids": [
+        "play-6bb4f46be3024172",
+        "play-9c3334ead988623c"
+      ]
+    },
+    {
+      "id": "charts_market_data",
+      "label": "Charts & market / holdings data",
+      "review_count": 1,
+      "avg_rating": 3.0,
+      "summary": "1 reviews; 0 rated ≤2★",
+      "sample_ids": [
+        "play-b1c3cbd69efc181b"
+      ]
+    },
+    {
+      "id": "customer_support",
+      "label": "Customer support",
+      "review_count": 1,
+      "avg_rating": 1.0,
+      "summary": "1 reviews; 1 rated ≤2★",
+      "sample_ids": [
+        "play-000f53979763356e"
+      ]
+    },
+    {
+      "id": "app_reliability",
+      "label": "App reliability & updates",
+      "review_count": 7,
+      "avg_rating": 3.429,
+      "summary": "7 reviews; 3 rated ≤2★",
+      "sample_ids": [
+        "play-9fe521f7fb8740f8",
+        "play-d7a87982fe9ea8ee",
+        "play-8d108d8bcec0c62e",
+        "play-205a6e6233f6d351",
+        "play-57f5b3ade70341e0",
+        "play-963ebbe903e6b8f0",
+        "play-ce7deacba2d56e99"
+      ]
+    },
+    {
+      "id": "fees_funding",
+      "label": "Fees, brokerage & funding",
+      "review_count": 1,
+      "avg_rating": 1.0,
+      "summary": "1 reviews; 1 rated ≤2★",
+      "sample_ids": [
+        "play-2ee39dd08cf0546c"
+      ]
+    }
+  ],
+  "top_3": [
+    "app_reliability",
+    "trading_orders",
+    "customer_support"
+  ],
+  "severity": {
+    "trading_orders": {
+      "low_star_count": 1
+    },
+    "charts_market_data": {
+      "low_star_count": 0
+    },
+    "customer_support": {
+      "low_star_count": 1
+    },
+    "app_reliability": {
+      "low_star_count": 3
+    },
+    "fees_funding": {
+      "low_star_count": 1
+    }
+  }
+}

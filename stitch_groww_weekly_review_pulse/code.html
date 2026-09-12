@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>History — Weekly Review Pulse</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface": "#f9f9ff",
+            "tertiary-container": "#ea841b",
+            "primary": "#006c4f",
+            "secondary-fixed-dim": "#c6c6cd",
+            "on-surface-variant": "#3c4a43",
+            "on-secondary-fixed": "#1a1b21",
+            "on-tertiary-container": "#542a00",
+            "error-container": "#ffdad6",
+            "on-primary-container": "#003d2c",
+            "primary-fixed-dim": "#50ddad",
+            "surface-variant": "#dfe2ef",
+            "tertiary-fixed": "#ffdcc3",
+            "surface-container-highest": "#dfe2ef",
+            "primary-fixed": "#71fac8",
+            "tertiary": "#904d00",
+            "primary-container": "#00b386",
+            "surface-dim": "#d7dae6",
+            "on-background": "#181c24",
+            "on-primary": "#ffffff",
+            "on-primary-fixed": "#002116",
+            "on-tertiary-fixed": "#2f1500",
+            "secondary-fixed": "#e2e2e9",
+            "on-tertiary-fixed-variant": "#6e3900",
+            "surface-tint": "#006c4f",
+            "secondary-container": "#dfdfe6",
+            "surface-container-low": "#f1f3ff",
+            "on-secondary-fixed-variant": "#45474d",
+            "on-secondary": "#ffffff",
+            "on-error": "#ffffff",
+            "inverse-primary": "#50ddad",
+            "background": "#f9f9ff",
+            "secondary": "#5d5e64",
+            "outline-variant": "#bbcac1",
+            "surface-container": "#ebedfa",
+            "inverse-on-surface": "#eef0fd",
+            "surface-container-high": "#e5e8f4",
+            "on-surface": "#181c24",
+            "tertiary-fixed-dim": "#ffb77d",
+            "on-secondary-container": "#616269",
+            "surface-bright": "#f9f9ff",
+            "inverse-surface": "#2c303a",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ba1a1a",
+            "outline": "#6c7a73",
+            "on-primary-fixed-variant": "#00513b"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "body-md": ["Inter"],
+            "label-md": ["Inter"],
+            "body-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "headline-sm": ["Inter"],
+            "headline-lg": ["Inter"],
+            "code-num": ["Inter"],
+            "headline-xl": ["Inter"]
+          },
+          "fontSize": {
+            "headline-md": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+            "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+            "body-md": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+            "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+            "body-lg": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-sm": ["15px", {"lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "code-num": ["13px", {"lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+            "headline-xl": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      font-size: 18px;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex selection:bg-primary-container selection:text-on-primary font-body-md text-body-md">
+<!-- LEFT SIDEBAR (SideNavBar Shared Component) -->
+<aside class="fixed top-0 bottom-0 left-0 w-60 h-screen bg-inverse-surface border-r border-outline-variant/20 z-40 flex flex-col justify-between p-4 select-none">
+<!-- Brand Header -->
+<div>
+<div class="flex items-center justify-between px-2 pt-1 pb-4">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded bg-primary-container inline-block shadow-sm"></span>
+<span class="text-headline-md font-headline-md font-bold tracking-tight text-surface-container-lowest">groww</span>
+</div>
+<span class="bg-surface-variant/20 text-surface-variant font-label-sm text-label-sm px-1.5 py-0.5 rounded tracking-wide border border-outline-variant/20">DT</span>
+</div>
+<p class="px-2 text-surface-variant text-label-sm font-label-sm mb-6 uppercase tracking-wider">Weekly Review Pulse</p>
+<!-- Navigation Links -->
+<nav class="space-y-1">
+<!-- Pulse -->
+<a class="text-surface-variant hover:text-surface-container-lowest pl-4 py-2.5 flex items-center gap-3 transition-colors font-body-md hover:bg-on-surface/10 rounded-lg" href="#">
+<span class="material-symbols-outlined text-surface-variant">insights</span>
+<span class="text-label-md font-label-md">Pulse</span>
+</a>
+<!-- Themes -->
+<a class="text-surface-variant hover:text-surface-container-lowest pl-4 py-2.5 flex items-center gap-3 transition-colors font-body-md hover:bg-on-surface/10 rounded-lg" href="#">
+<span class="material-symbols-outlined text-surface-variant">category</span>
+<span class="text-label-md font-label-md">Themes</span>
+</a>
+<!-- Evidence -->
+<a class="text-surface-variant hover:text-surface-container-lowest pl-4 py-2.5 flex items-center gap-3 transition-colors font-body-md hover:bg-on-surface/10 rounded-lg" href="#">
+<span class="material-symbols-outlined text-surface-variant">rate_review</span>
+<span class="text-label-md font-label-md">Evidence</span>
+</a>
+<!-- Actions -->
+<a class="text-surface-variant hover:text-surface-container-lowest pl-4 py-2.5 flex items-center gap-3 transition-colors font-body-md hover:bg-on-surface/10 rounded-lg" href="#">
+<span class="material-symbols-outlined text-surface-variant">task_alt</span>
+<span class="text-label-md font-label-md">Actions</span>
+</a>
+<!-- Delivery -->
+<a class="text-surface-variant hover:text-surface-container-lowest pl-4 py-2.5 flex items-center gap-3 transition-colors font-body-md hover:bg-on-surface/10 rounded-lg" href="#">
+<span class="material-symbols-outlined text-surface-variant">send</span>
+<span class="text-label-md font-label-md">Delivery</span>
+</a>
+<!-- Gates -->
+<a class="text-surface-variant hover:text-surface-container-lowest pl-4 py-2.5 flex items-center gap-3 transition-colors font-body-md hover:bg-on-surface/10 rounded-lg" href="#">
+<span class="material-symbols-outlined text-surface-variant">verified</span>
+<span class="text-label-md font-label-md">Gates</span>
+</a>
+<!-- History (ACTIVE) -->
+<a class="text-primary-container bg-primary-container/10 border-l-2 border-primary-container font-headline-sm pl-4 py-2.5 flex items-center gap-3 transition-colors rounded-r-lg" href="#">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="text-label-md font-label-md font-semibold text-primary-container">History</span>
+</a>
+</nav>
+</div>
+<!-- Footer Meta -->
+<div class="border-t border-outline-variant/10 pt-4 space-y-2 px-2">
+<div class="flex items-center gap-2 text-surface-variant text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-primary-container text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>MCP healthy</span>
+</div>
+<div class="flex items-center gap-2 text-surface-variant text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[16px]">shield</span>
+<span>Play Store only · no PII</span>
+</div>
+</div>
+</aside>
+<!-- MAIN CANVAS -->
+<div class="pl-60 flex-1 flex flex-col min-w-0">
+<!-- TOP NAVIGATION BAR (TopNavBar Shared Component) -->
+<header class="h-16 bg-surface-container-lowest border-b border-surface-container-high px-6 flex items-center justify-between sticky top-0 z-30">
+<div class="flex items-center gap-3">
+<div>
+<div class="flex items-center gap-2.5">
+<h1 class="text-headline-md font-headline-md font-semibold text-on-surface tracking-tight">History</h1>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-secondary font-medium">
+<span class="material-symbols-outlined text-[13px] text-secondary">calendar_today</span>
+              2026-W37 · Week ending 8 Sep 2026
+            </span>
+</div>
+<p class="text-label-sm font-label-sm text-secondary">Archive of weekly executive pulses · append-only living doc</p>
+</div>
+</div>
+<!-- Trailing Action Items -->
+<div class="flex items-center gap-3">
+<!-- MCP Green Dot -->
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1 rounded border border-surface-container-high" title="MCP Connection Validated">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">MCP active</span>
+</div>
+<!-- Gates PASS Chip -->
+<div class="flex items-center gap-1 px-2.5 py-1 rounded bg-[#E6F7F2] text-[#00B386] font-label-sm text-label-sm font-semibold border border-[#D1F2E8]">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+          Gates PASS
+        </div>
+<!-- View Gmail Draft (Secondary) -->
+<button class="h-9 px-3.5 rounded-lg border border-surface-container-high bg-surface-container-lowest hover:bg-surface-container-low text-on-surface text-label-md font-label-md transition-colors flex items-center gap-1.5 active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">mail</span>
+          View Gmail draft
+        </button>
+<!-- Open Google Doc (Primary Mint) -->
+<button class="h-9 px-4 rounded-lg bg-primary-container hover:bg-[#009E76] active:bg-[#008A67] text-on-primary text-label-md font-label-md font-semibold transition-colors flex items-center gap-1.5 shadow-sm active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[16px]">description</span>
+          Open Google Doc
+        </button>
+</div>
+</header>
+<!-- CONTENT BODY -->
+<main class="p-6 max-w-7xl w-full mx-auto space-y-6">
+<!-- Breadcrumb & Scope Header Banner -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-surface-container-lowest p-4 rounded-xl border border-surface-container-high">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center border border-surface-container">
+<span class="material-symbols-outlined text-primary text-[20px]">history_toggle_off</span>
+</div>
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface">Weekly Executive Cycle Register</h2>
+<p class="text-body-sm font-body-sm text-secondary">Immutable historical ledger synchronised with corporate Google Drive master brief</p>
+</div>
+</div>
+<div class="flex items-center gap-3 text-label-sm font-label-sm text-secondary self-start sm:self-auto">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">verified_user</span>
+            Cryptographically Anchored
+          </span>
+<span class="text-outline-variant">|</span>
+<span>Retention: Indefinite (Append-only)</span>
+</div>
+</div>
+<!-- MAIN TABLE: WEEKLY CYCLES -->
+<section class="bg-surface-container-lowest rounded-xl border border-surface-container-high overflow-hidden shadow-sm">
+<div class="px-5 py-4 border-b border-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Review Cycle Archive</h3>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-secondary font-medium">3 Recorded</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-sm font-label-sm text-secondary">Filter source:</span>
+<span class="text-label-sm font-label-sm font-medium px-2 py-0.5 rounded bg-surface-container-low text-on-surface">Google Play Store Production</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface-container-high bg-surface-container-low/50">
+<th class="py-3 px-5 text-label-sm font-label-sm text-secondary uppercase tracking-[0.04em]">Review Cycle</th>
+<th class="py-3 px-5 text-label-sm font-label-sm text-secondary uppercase tracking-[0.04em]">Cycle Status</th>
+<th class="py-3 px-5 text-label-sm font-label-sm text-secondary uppercase tracking-[0.04em]">Dominant Theme</th>
+<th class="py-3 px-5 text-label-sm font-label-sm text-secondary uppercase tracking-[0.04em]">Coverage & Depth</th>
+<th class="py-3 px-5 text-label-sm font-label-sm text-secondary uppercase tracking-[0.04em]">Gate Status</th>
+<th class="py-3 px-5 text-label-sm font-label-sm text-secondary uppercase tracking-[0.04em] text-right">Living Doc Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high">
+<!-- ROW 1: CURRENT / SELECTED WEEK 2026-W37 -->
+<tr class="bg-[#E6F7F2]/30 hover:bg-[#E6F7F2]/50 transition-colors cursor-pointer border-l-4 border-l-primary-container">
+<td class="py-4 px-5">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-code-num text-code-num font-semibold text-on-surface">2026-W37</span>
+<span class="bg-primary-container/10 text-primary-container font-label-sm text-[10px] px-1.5 py-0.2 rounded font-semibold">Current selection</span>
+</div>
+<div class="text-body-sm font-body-sm text-secondary">Week ending 8 Sep 2026</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-label-sm font-label-sm font-semibold bg-[#E6F7F2] text-[#00B386] border border-[#D1F2E8]">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    Active / Published
+                  </span>
+</td>
+<td class="py-4 px-5">
+<div class="font-label-md text-label-md text-on-surface font-medium">App reliability & updates</div>
+<div class="text-body-sm font-body-sm text-secondary">41% volume share · 502 mentions</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<div class="space-y-0.5">
+<div class="font-code-num text-code-num text-on-surface font-medium">1,226 reviews</div>
+<div class="text-body-sm font-body-sm text-secondary">45% ≤2★ critical</div>
+</div>
+<span class="text-outline-variant/60">·</span>
+<span class="font-code-num text-code-num text-secondary">204 words</span>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold bg-[#E6F7F2] text-[#00B386]">
+<span class="material-symbols-outlined text-[14px]">task_alt</span>
+                    Gates PASS
+                  </span>
+</td>
+<td class="py-4 px-5 text-right">
+<div class="inline-flex items-center gap-2">
+<button class="px-2.5 py-1 text-label-sm font-label-sm font-semibold text-primary bg-surface-container-lowest hover:bg-surface-container rounded border border-outline-variant/40 transition-colors">
+                      View Pulse
+                    </button>
+<a class="inline-flex items-center gap-1 text-label-sm font-label-sm text-primary hover:underline" href="#doc-section-w37">
+<span>Doc #2026-W37</span>
+<span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</div>
+</td>
+</tr>
+<!-- ROW 2: WEEK 2026-W36 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-4 px-5">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<div>
+<span class="font-code-num text-code-num font-semibold text-on-surface">2026-W36</span>
+<div class="text-body-sm font-body-sm text-secondary">Week ending 1 Sep 2026</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm font-semibold bg-surface-container text-secondary">
+                    Archived
+                  </span>
+</td>
+<td class="py-4 px-5">
+<div class="font-label-md text-label-md text-on-surface">Trading & order execution</div>
+<div class="text-body-sm font-body-sm text-secondary text-[11px]">Sample / Snapshot not loaded in demo</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<div class="space-y-0.5">
+<div class="font-code-num text-code-num text-secondary">1,180 reviews</div>
+<div class="text-body-sm font-body-sm text-secondary">41% ≤2★ critical</div>
+</div>
+<span class="text-outline-variant/60">·</span>
+<span class="font-code-num text-code-num text-secondary">218w</span>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[14px]">done</span>
+                    Gates PASS
+                  </span>
+</td>
+<td class="py-4 px-5 text-right">
+<a class="inline-flex items-center gap-1 text-label-sm font-label-sm text-secondary hover:text-on-surface" href="#">
+<span>Doc #2026-W36</span>
+<span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</td>
+</tr>
+<!-- ROW 3: WEEK 2026-W35 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-4 px-5">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<div>
+<span class="font-code-num text-code-num font-semibold text-on-surface">2026-W35</span>
+<div class="text-body-sm font-body-sm text-secondary">Week ending 25 Aug 2026</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm font-semibold bg-surface-container text-secondary">
+                    Archived
+                  </span>
+</td>
+<td class="py-4 px-5">
+<div class="font-label-md text-label-md text-on-surface">App reliability & updates</div>
+<div class="text-body-sm font-body-sm text-secondary text-[11px]">Sample / Snapshot not loaded in demo</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<div class="space-y-0.5">
+<div class="font-code-num text-code-num text-secondary">994 reviews</div>
+<div class="text-body-sm font-body-sm text-secondary">38% ≤2★ critical</div>
+</div>
+<span class="text-outline-variant/60">·</span>
+<span class="font-code-num text-code-num text-secondary">195w</span>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[14px]">done</span>
+                    Gates PASS
+                  </span>
+</td>
+<td class="py-4 px-5 text-right">
+<a class="inline-flex items-center gap-1 text-label-sm font-label-sm text-secondary hover:text-on-surface" href="#">
+<span>Doc #2026-W35</span>
+<span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- INSPECTION PANE (DUAL COLUMN: DETAILS & LIVING DOC NOTE) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- DETAILS FOR SELECTED WEEK (2026-W37) - 8 COLS -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl border border-surface-container-high p-6 space-y-5 shadow-sm">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-4">
+<div class="flex items-center gap-3">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Inspection: Cycle 2026-W37</h3>
+<p class="text-body-sm font-body-sm text-secondary">Living Document snapshot metadata and integrity verification</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-[#E6F7F2] text-[#00B386] font-label-sm text-label-sm font-semibold">
+              Live in Master Google Doc
+            </span>
+</div>
+<!-- METADATA KPI TILES -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="p-3 bg-surface-container-low rounded-lg border border-surface-container">
+<span class="text-label-sm font-label-sm text-secondary block mb-1 uppercase tracking-wider">Living Doc Section</span>
+<span class="font-code-num text-headline-sm text-on-surface font-semibold">#2026-W37</span>
+<span class="text-body-sm text-secondary block text-[11px] mt-0.5">Appended to Page 42</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg border border-surface-container">
+<span class="text-label-sm font-label-sm text-secondary block mb-1 uppercase tracking-wider">Delivery Timestamp</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">08:02 IST</span>
+<span class="text-body-sm text-secondary block text-[11px] mt-0.5">Mon, 8 Sep 2026</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg border border-surface-container">
+<span class="text-label-sm font-label-sm text-secondary block mb-1 uppercase tracking-wider">Dispatcher Identity</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Groww MCP Bot</span>
+<span class="text-body-sm text-secondary block text-[11px] mt-0.5">Token Auth: Verified</span>
+</div>
+</div>
+<!-- INTEGRITY HASH CARD -->
+<div class="p-3.5 bg-surface-container-low rounded-lg border border-surface-container space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-secondary flex items-center gap-1 uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                SHA-256 Audit Integrity Hash
+              </span>
+<span class="font-label-sm text-[11px] text-primary cursor-pointer hover:underline">Copy Hash</span>
+</div>
+<div class="font-code-num text-[12px] text-on-surface bg-surface-container-lowest p-2 rounded border border-surface-container font-mono break-all select-all">
+              e8b4f1773a903e15bca73d5ff64bf87ad74d0016e788c039dbd7aa9ef40212f0
+            </div>
+</div>
+<!-- 3 TOP THEMES SUMMARIZED -->
+<div>
+<h4 class="text-label-md font-label-md font-semibold text-on-surface mb-3 uppercase tracking-wider">Executive Theme Breakdown (W37)</h4>
+<div class="space-y-2.5">
+<!-- Theme 1 -->
+<div class="p-3 rounded-lg border border-surface-container-high bg-surface-container-lowest flex items-start gap-3 border-l-2 border-l-[#00B386]">
+<div class="w-6 h-6 rounded bg-[#E6F7F2] text-[#00B386] flex items-center justify-center font-code-num text-label-sm font-semibold shrink-0">1</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-label-md font-semibold text-on-surface">App reliability & updates</span>
+<span class="text-label-sm font-label-sm text-secondary font-medium">502 reviews · 41%</span>
+</div>
+<p class="text-body-sm font-body-sm text-secondary mt-0.5">Crash spikes reported on Android 14 post v18.4.1 release during active market hours (09:15 - 10:30 IST).</p>
+</div>
+</div>
+<!-- Theme 2 -->
+<div class="p-3 rounded-lg border border-surface-container-high bg-surface-container-lowest flex items-start gap-3 border-l-2 border-l-secondary">
+<div class="w-6 h-6 rounded bg-surface-container text-secondary flex items-center justify-center font-code-num text-label-sm font-semibold shrink-0">2</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-label-md font-semibold text-on-surface">Trading & order execution</span>
+<span class="text-label-sm font-label-sm text-secondary font-medium">318 reviews · 26%</span>
+</div>
+<p class="text-body-sm font-body-sm text-secondary mt-0.5">Option chain latency spikes during bank nifty expiries; high broker terminal execution ticket volume.</p>
+</div>
+</div>
+<!-- Theme 3 -->
+<div class="p-3 rounded-lg border border-surface-container-high bg-surface-container-lowest flex items-start gap-3 border-l-2 border-l-secondary">
+<div class="w-6 h-6 rounded bg-surface-container text-secondary flex items-center justify-center font-code-num text-label-sm font-semibold shrink-0">3</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-label-md font-semibold text-on-surface">KYC & onboarding verification</span>
+<span class="text-label-sm font-label-sm text-secondary font-medium">194 reviews · 16%</span>
+</div>
+<p class="text-body-sm font-body-sm text-secondary mt-0.5">DigiLocker timeout delays impacting F&O activation turnaround; 14% drop-off mitigation underway.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- EMPTY STATE ILLUSTRATION NOTE FOR PRIOR WEEKS - 4 COLS -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl border border-surface-container-high p-6 flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center gap-2 mb-4 text-primary">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Historical Snapshots</h4>
+</div>
+<!-- ILLUSTRATION ARTIFACT -->
+<div class="py-8 px-4 bg-surface-container-low rounded-xl border border-surface-container flex flex-col items-center text-center my-2">
+<div class="w-14 h-14 rounded-2xl bg-[#E6F7F2] text-[#00B386] flex items-center justify-center mb-4 shadow-sm border border-[#D1F2E8]">
+<span class="material-symbols-outlined text-[28px]">description</span>
+</div>
+<p class="text-headline-sm font-headline-sm text-on-surface mb-2">Living Document Sync</p>
+<p class="text-body-sm font-body-sm text-secondary leading-relaxed">
+                Historical snapshots prior to 2026-W37 are archived in Google Docs living document. Selecting earlier weeks in this preview shows metadata only; full interactive pulse snapshots are stored append-only.
+              </p>
+</div>
+</div>
+<!-- AUDIT RETENTION META FOOTER -->
+<div class="mt-6 pt-4 border-t border-surface-container-high space-y-2">
+<div class="flex justify-between items-center text-label-sm font-label-sm text-secondary">
+<span>Living Document ID:</span>
+<span class="font-code-num text-on-surface">1bQ...88xZ</span>
+</div>
+<div class="flex justify-between items-center text-label-sm font-label-sm text-secondary">
+<span>Sync Policy:</span>
+<span class="text-on-surface font-medium">Strictly Append-Only</span>
+</div>
+<div class="flex justify-between items-center text-label-sm font-label-sm text-secondary">
+<span>PII Retention:</span>
+<span class="text-[#00B386] font-semibold">Zero-PII Filtered</span>
+</div>
+<a class="mt-3 block w-full text-center py-2 px-3 rounded-lg border border-surface-container-high bg-surface-container-lowest hover:bg-surface-container text-label-md font-label-md text-on-surface font-medium transition-colors" href="#">
+              Access Full Master Doc
+            </a>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

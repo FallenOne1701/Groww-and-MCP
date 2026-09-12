@@ -1,0 +1,45 @@
+{
+  "started_at": "2026-09-12T14:52:37.409252+00:00",
+  "sequence": "fetch -> classify -> pulse -> Docs append -> Gmail",
+  "mode": "heuristic",
+  "weeks": 8,
+  "skip_fetch": true,
+  "skip_delivery": false,
+  "send_email": false,
+  "mcp_transport": "inprocess",
+  "fetch": {
+    "skipped": true,
+    "weeks": 8,
+    "package_id": "com.nextbillion.groww",
+    "cleaned_path": "C:\\Users\\dhruv\\OneDrive\\Desktop\\AI agent and MCP\\data\\cleaned\\reviews.json",
+    "fetched_at": null,
+    "review_count": 1314,
+    "window_start": "2026-07-21",
+    "window_end": "2026-09-11"
+  },
+  "week_key": "2026-W37",
+  "classify": {
+    "week_key": "2026-W37",
+    "review_count": 1314,
+    "top_3": [
+      "app_reliability",
+      "trading_orders",
+      "customer_support"
+    ],
+    "word_count": 204,
+    "validation_ok": true,
+    "insufficient_signal": false,
+    "window_widened": false
+  },
+  "delivery": {
+    "doc_id": "doc_80960dbed161",
+    "doc_url": "https://docs.google.com/document/d/doc_80960dbed161/edit",
+    "draft_id": "draft_22100987ac6e",
+    "sent_id": null,
+    "skipped": true,
+    "gmail_only": false,
+    "errors": []
+  },
+  "finished_at": "2026-09-12T14:52:38.753166+00:00",
+  "exit_reason": "idempotent_skip"
+}
