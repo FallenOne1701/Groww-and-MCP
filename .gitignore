@@ -7,6 +7,11 @@ ENV/
 # Environment / secrets
 .env
 .env.local
+web/.env.local
+
+# Next.js frontend
+web/node_modules/
+web/.next/
 *.pem
 credentials.json
 token.json

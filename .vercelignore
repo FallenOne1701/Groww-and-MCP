@@ -1,0 +1,11 @@
+.venv
+data
+output
+tests
+src
+requirements.txt
+.env
+**/.env
+**/.env.local
+web/node_modules
+web/.next
